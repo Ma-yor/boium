@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology & Health Interoperability in Nigeria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+    .chart-container { position: relative; width: 100%; max-width: 500px; margin: auto; height: 300px; }
+    @media (min-width: 768px) { .chart-container { height: 350px; } }
+    .icon-card { background-color: #f1f5f9; border-radius: 0.75rem; padding: 1.5rem; text-align: center; border: 1px solid #e2e8f0; }
+    .icon-card span { font-size: 3rem; line-height: 1; display: block; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body class="text-gray-800">
+  <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#003f5c] mb-4">Technology & Health Interoperability in Nigeria</h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">How Digital Systems Can Transform Public & Private Healthcare</p>
+    </header>
+
+    <main class="space-y-16">
+      <!-- Highlight -->
+      <section class="text-center bg-white rounded-lg shadow-xl p-8">
+        <p class="text-2xl font-semibold text-[#003f5c] mb-2">A Critical Stat</p>
+        <p class="text-6xl md:text-8xl font-bold text-[#bc5090]">80%</p>
+        <p class="text-lg text-gray-600 mt-2">of Nigerian hospitals still rely on paper-based systems, limiting efficiency, data sharing, and quality of care.</p>
+      </section>
+
+      <!-- Benefits Grid -->
+      <section>
+        <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-8">Key Benefits of Health Interoperability</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="icon-card">
+            <span>🏥</span>
+            <h3 class="text-xl font-semibold mb-2">Public Hospitals</h3>
+            <p>Better patient records, stronger disease surveillance, faster NHIA claims.</p>
+          </div>
+          <div class="icon-card">
+            <span>💼</span>
+            <h3 class="text-xl font-semibold mb-2">Private Providers</h3>
+            <p>Smoother insurance integration, less duplication of tests, tailored treatments.</p>
+          </div>
+          <div class="icon-card">
+            <span>📱</span>
+            <h3 class="text-xl font-semibold mb-2">Patients</h3>
+            <p>Seamless access across facilities, telemedicine continuity, improved safety.</p>
+          </div>
+          <div class="icon-card">
+            <span>📊</span>
+            <h3 class="text-xl font-semibold mb-2">Government</h3>
+            <p>Data-driven allocation, outbreak prediction, improved health planning.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Example -->
+      <section class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-6">A Patient’s Journey with Interoperability</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-center mb-8">Chika visits a rural PHC, later goes to a private diagnostic lab, and finally submits an NHIA insurance claim. With interoperability, her data flows seamlessly—reducing delays, duplication, and errors.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="bg-[#e0f2fe] rounded-lg p-6">
+            <span class="text-4xl">🏥</span>
+            <h3 class="text-lg font-bold mb-2">Primary Health Centre</h3>
+            <p>Chika’s vitals and history are recorded digitally.</p>
+          </div>
+          <div class="bg-[#ede9fe] rounded-lg p-6">
+            <span class="text-4xl">🧪</span>
+            <h3 class="text-lg font-bold mb-2">Private Lab</h3>
+            <p>Lab results sync automatically with her PHC file.</p>
+          </div>
+          <div class="bg-[#fef3c7] rounded-lg p-6">
+            <span class="text-4xl">💳</span>
+            <h3 class="text-lg font-bold mb-2">NHIA Insurance</h3>
+            <p>Claims are verified instantly with complete records.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data & Charts -->
+      <section class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-8">The Data: Why Interoperability Matters</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-xl font-bold text-center text-[#003f5c] mb-2">EMR Adoption</h3>
+            <p class="text-gray-600 text-center mb-4">Nigeria lags behind peers in adopting electronic medical records.</p>
+            <div class="chart-container">
+              <canvas id="emrChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-center text-[#003f5c] mb-2">Benefits Breakdown</h3>
+            <p class="text-gray-600 text-center mb-4">Efficiency, cost savings, and quality of care are major gains.</p>
+            <div class="chart-container">
+              <canvas id="benefitsChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Challenges -->
+      <section>
+        <h2 class="text-3xl font-bold text-center text-[#003f5c] mb-8">Challenges to Overcome</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="text-5xl text-[#ff6361] mb-4">🚧</div>
+            <h3 class="text-xl font-semibold mb-2">Infrastructure</h3>
+            <p>Unreliable electricity and internet in rural areas limit EMR use.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="text-5xl text-[#ffa600] mb-4">🔐</div>
+            <h3 class="text-xl font-semibold mb-2">Data Privacy</h3>
+            <p>Compliance with NDPR and ensuring secure health data exchange.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="text-5xl text-[#58508d] mb-4">👩‍⚕️</div>
+            <h3 class="text-xl font-semibold mb-2">Workforce Training</h3>
+            <p>Healthcare workers need digital literacy and EMR training.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <footer class="text-center pt-8 border-t">
+        <h2 class="text-2xl font-bold text-[#003f5c] mb-4">A Call for Action</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-6">Building a unified health information exchange is the next step for Nigeria. By connecting public and private providers, the nation can reduce costs, improve care, and strengthen resilience.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Charts Script -->
+  <script>
+    const emrCtx = document.getElementById('emrChart').getContext('2d');
+    new Chart(emrCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Nigeria', 'Kenya', 'South Africa'],
+        datasets: [{
+          label: '% of facilities using EMRs',
+          data: [15, 40, 65],
+          backgroundColor: ['#ff6361', '#58508d', '#003f5c'],
+          borderRadius: 4,
+          barPercentage: 0.6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: { display: true, text: 'Percentage (%)' }
+          }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    const benefitsCtx = document.getElementById('benefitsChart').getContext('2d');
+    new Chart(benefitsCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Efficiency', 'Cost Savings', 'Quality of Care', 'Reduced Fraud'],
+        datasets: [{
+          data: [35, 25, 30, 10],
+          backgroundColor: ['#bc5090', '#ffa600', '#58508d', '#ff6361'],
+          borderColor: '#FFFFFF',
+          borderWidth: 4,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 14 } } }
+        },
+        cutout: '60%'
+      }
+    });
+  </script>
+</body>
+</html>
